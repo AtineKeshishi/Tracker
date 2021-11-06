@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.AccountFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/name_hint"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <EditText
+        android:id="@+id/edtWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/weight_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/edtName"
+        app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+
+    <TextView
+        android:id="@+id/txtWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/kg"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtWeight"
+        app:layout_constraintLeft_toRightOf="@id/edtWeight"
+        app:layout_constraintTop_toTopOf="@+id/edtWeight" />
+
+
+    <EditText
+        android:id="@+id/edtHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/height_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/edtWeight"
+        app:layout_constraintTop_toBottomOf="@+id/edtWeight" />
+
+
+    <TextView
+        android:id="@+id/txtHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/cm"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtHeight"
+        app:layout_constraintLeft_toRightOf="@id/edtHeight"
+        app:layout_constraintTop_toTopOf="@+id/edtHeight" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/txtBMILabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bmi_label"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/txtNormalWeight"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBMI"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="40sp"
+                app:layout_constraintStart_toStartOf="@id/txtBMILabel"
+                app:layout_constraintTop_toBottomOf="@+id/txtBMILabel"
+                tools:text="25.0" />
+
+            <TextView
+                android:id="@+id/txtCategoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/category_label"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtNormalWeight"
+                app:layout_constraintStart_toEndOf="@+id/txtBMI"
+                app:layout_constraintTop_toTopOf="@id/txtBMI" />
+
+            <TextView
+                android:id="@+id/txtCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imgStatus"
+                app:layout_constraintTop_toBottomOf="@+id/txtCategoryLabel"
+                tools:text="Morbidly Obese" />
+
+            <ImageView
+                android:id="@+id/imgStatus"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_round"
+                app:layout_constraintBottom_toBottomOf="@+id/txtCategory"
+                app:layout_constraintStart_toStartOf="@+id/txtCategoryLabel"
+                app:layout_constraintTop_toTopOf="@id/txtCategory" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/imgBmi"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="100dp"-->
+            <!--                android:layout_marginTop="40dp"-->
+            <!--                android:src="@drawable/img_bmi"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/txtBMI"/>-->
+
+            <TextView
+                android:id="@+id/txtNormalWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:lineSpacingExtra="8dp"
+                android:text="@string/healthy_weight"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgStatus" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnApplyChanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/apply_changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edtHeight"
+        app:layout_constraintStart_toStartOf="@+id/edtHeight"
+        app:layout_constraintTop_toBottomOf="@+id/edtHeight" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
