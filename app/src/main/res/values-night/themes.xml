@@ -7,7 +7,7 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorAccent">?attr/colorSecondary</item>
         <item name="colorError">@color/error</item>
-        <item name="colorOnBackground">@color/gray_800</item> // Bottom navigation background
+        <item name="colorOnBackground">@color/gray_800</item>
         <item name="colorOnSurface">@color/black</item>
 
         <!-- Secondary brand color. -->
@@ -19,8 +19,7 @@
         <!-- Customize. -->
         <item name="android:windowBackground">?attr/colorPrimaryVariant</item>
         <item name="android:navigationBarColor">?attr/colorPrimary</item>
-<!--        <item name="alertDialogTheme">@style/AlertDialogTheme</item>-->
         <item name="bottomNavigationStyle">@style/BottomNavigationTheme</item>
-
     </style>
+
 </resources>

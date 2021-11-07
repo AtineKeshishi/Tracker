@@ -4,13 +4,11 @@
     <color name="amber_700">#FFA000</color>
     <color name="amber_500">#FFC107</color>
 
-
     <color name="blue_gray_900">#263238</color>
     <color name="blue_gray_800">#37474F</color>
     <color name="blue_gray_700">#455A64</color>
     <color name="blue_gray_500">#607D8B</color>
     <color name="blue_gray_50">#ECEFF1</color>
-
 
     <color name="gray_900">#212121</color>
     <color name="gray_800">#424242</color>
